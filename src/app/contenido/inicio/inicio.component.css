@@ -1,0 +1,95 @@
+.editorial {
+  max-width: auto;
+  height: 100%;
+}
+
+.editorial {
+  display: block;
+  max-width: auto;
+  height: 100%;
+}
+
+.btn-a {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.btn-a:hover {
+  background-color: rgb(122, 65, 122);
+  color: azure;
+}
+
+.btn-b {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.btn-b:hover {
+  background-color: rgb(223, 119, 98);
+  color: azure;
+}
+
+.btn-c {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.btn-c:hover {
+  background-color: rgb(150, 121, 95);
+  color: azure;
+}
+
+.btn-d {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.btn-d:hover {
+  background-color: rgb(54, 106, 57);
+  color: azure;
+}
+
+.btn-e {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.btn-e:hover {
+  background-color: rgb(183, 48, 40);
+  color: azure;
+}
+
+.btn-f {
+  background-color: rgb(247, 247, 247);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.btn-f:hover {
+  background-color: rgb(231, 61, 50);
+  color: azure;
+}
+
+.contenedor {
+
+
+  display: flex;
+  justify-content: center;
+}

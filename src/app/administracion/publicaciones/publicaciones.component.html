@@ -1,0 +1,169 @@
+<div class="row mt-3">
+  <div class="col">
+    <h2>Registrar Publicacion</h2>
+  </div>
+</div>
+<div class="row">
+  <form [formGroup]="publicacionForm" (ngSubmit)="onSubmit(publicacionForm)">
+    <div class="form-group">
+      <label for="titulo_publicacion" class="form-label">Titulo</label>
+      <input
+        type="text"
+        [ngClass]="{
+          'is-invalid': publicacionForm
+            .get('titulo_publicacion')
+            ?.hasError('required')
+        }"
+        formControlName="titulo_publicacion"
+        name="titulo_publicacion"
+        id="titulo_publicacion"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="resumen_publicacion" class="form-label">Resumen</label>
+      <input
+        type="textarea"
+        [ngClass]="{
+          'is-invalid': publicacionForm
+            .get('resumen_publicacion')
+            ?.hasError('required')
+        }"
+        formControlName="resumen_publicacion"
+        name="resumen_publicacion"
+        id="resumen_publicacion"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="prioridad_publicacion" class="form-label">Prioridad</label>
+      <input
+        type="textarea"
+        [ngClass]="{
+          'is-invalid': publicacionForm
+            .get('prioridad_publicacion')
+            ?.hasError('required')
+        }"
+        formControlName="prioridad_publicacion"
+        name="prioridad_publicacion"
+        id="prioridad_publicacion"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="contenido_publicacion" class="form-label">Contenido</label>
+      <div class="NgxEditor__Wrapper">
+        <div class="editor">
+          <ngx-editor-menu [editor]="editor" [toolbar]="toolbar">
+          </ngx-editor-menu>
+
+          <ngx-editor
+            [ngClass]="{
+              'is-invalid': publicacionForm
+                .get('contenido_publicacion')
+                ?.hasError('required')
+            }"
+            [editor]="editor"
+            formControlName="contenido_publicacion"
+            Name="contenido_publicacion"
+          >
+          </ngx-editor>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="inicio_publicacion" class="form-label">Inicio</label>
+        <input
+          type="date"
+          [ngClass]="{
+            'is-invalid': publicacionForm
+              .get('inicio_publicacion')
+              ?.hasError('required')
+          }"
+          formControlName="inicio_publicacion"
+          name="inicio_publicacion"
+          id="inicio_publicacion"
+          class="form-control"
+        />
+      </div>
+      <div class="col">
+        <label for="fin_publicacion" class="form-label">Fin</label>
+        <input
+          type="date"
+          [ngClass]="{
+            'is-invalid': publicacionForm
+              .get('fin_publicacion')
+              ?.hasError('required')
+          }"
+          formControlName="fin_publicacion"
+          name="fin_publicacion"
+          id="fin_publicacion"
+          class="form-control"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="img_car_publicacion" class="form-label"
+          >Imagen Tarjeta</label
+        >
+        <input
+          type="text"
+          [ngClass]="{
+            'is-invalid': publicacionForm
+              .get('img_car_publicacion')
+              ?.hasError('required')
+          }"
+          formControlName="img_car_publicacion"
+          name="img_car_publicacion"
+          id="img_car_publicacion"
+          class="form-control"
+        />
+      </div>
+      <div class="col">
+        <label for="img_header_publicacion" class="form-label"
+          >Imagen Header</label
+        >
+        <input
+          type="text"
+          [ngClass]="{
+            'is-invalid': publicacionForm
+              .get('img_header_publicacion')
+              ?.hasError('required')
+          }"
+          formControlName="img_header_publicacion"
+          name="img_header_publicacion"
+          id="img_header_publicacion"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="row form-group mt.2">
+      <div class="col-2">
+        <input
+          type="submit"
+          class="btn btn-success form-control"
+          value="Publicar"
+          [disabled]="publicacionForm.invalid"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+<div class="row mt-4">
+  <div class="col">
+    <div class="row">
+      <input type="file" name="" id="" (change)="getFileCARD($event)" />
+      <button class="btn btn-success col-6 mt-2" (click)="sendFileCARD()">Cargar Img.</button>
+    </div>
+  </div>
+  <div class="col">
+    <div class="row">
+      <input type="file" name="" id="" (change)="getFileSLIDE($event)" />
+      <button class="btn btn-success col-6 mt-2" (click)="sendFileSLIDE()">Cargar Slid.</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row mt-4">
+  <h2>Publicaciones</h2>
+</div>
+<div class="table-responsive mt-2">
+  <table
+    datatable
+    [dtOptions]="dtOptions"
+    [dtTrigger]="dtTrigger"
+    class="row-border hover"
+  >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TITULO</th>
+        <th>INICIO</th>
+        <th>FIN</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let publicacion of publicaciones">
+        <td>{{ publicacion.id_publicacion }}</td>
+        <td>{{ publicacion.titulo_publicacion }}</td>
+        <td>{{ publicacion.inicio_publicacion }}</td>
+        <td>{{ publicacion.fin_publicacion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

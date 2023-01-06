@@ -1,0 +1,24 @@
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">{{ titulo }} <br /></h1>
+      <p class="lead text-muted">
+        {{ resumen }}
+      </p>
+    </div>
+  </div>
+  <div class="row py-lg-5">
+    <img
+      src="http://localhost/megazine/megazineBackend/public/api/publicacion/obtenerImagenTarjeta/{{
+        imagen
+      }}"
+      class="img-fluid"
+    />
+  </div>
+</section>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div [innerHTML]="contenido"></div>
+  </div>
+</div>
