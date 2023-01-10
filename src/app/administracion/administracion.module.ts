@@ -7,14 +7,12 @@ import { AdministracionroutingModule } from './administracionrouting.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PublicacionesComponent } from './publicaciones/publicaciones.component';
 import { FileUploadModule } from 'ng2-file-upload';
-import { DataTablesModule } from "angular-datatables";
+import { DataTablesModule } from 'angular-datatables';
 import { ListarPublicacionesComponent } from './listar-publicaciones/listar-publicaciones.component';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 @NgModule({
-  declarations: [
-    PublicacionesComponent,
-    ListarPublicacionesComponent
-  ],
+  declarations: [PublicacionesComponent, ListarPublicacionesComponent],
   imports: [
     NgxEditorModule,
     CommonModule,
@@ -23,10 +21,10 @@ import { ListarPublicacionesComponent } from './listar-publicaciones/listar-publ
     FormsModule,
     ReactiveFormsModule,
     FileUploadModule,
-    DataTablesModule
+    DataTablesModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot(),
   ],
-  exports: [
-    PublicacionesComponent
-  ]
+  exports: [PublicacionesComponent],
 })
-export class AdministracionModule { }
+export class AdministracionModule {}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { global } from 'src/app/services/global';
 import { PublicacionService } from 'src/app/services/publicacion.service';
 
 @Component({
@@ -9,21 +10,21 @@ import { PublicacionService } from 'src/app/services/publicacion.service';
 export class InicioComponent implements OnInit {
 
   publicaciones: any;
+  url = global.url+'publicacion/obtenerImagenTarjeta/';
 
   constructor(
-    private publicacionService: PublicacionService
+    private publicacionService: PublicacionService,
   ) {
   }
 
   ngOnInit(): void {
-
     this.obtenerPublicacionPortada();
   }
+
 
   obtenerPublicacionPortada() {
     this.publicacionService.obtenetPublicacionesPortada().subscribe(
       response => {
-        console.log(response);
         this.publicaciones = response.publicaciones;
       },
       error => {

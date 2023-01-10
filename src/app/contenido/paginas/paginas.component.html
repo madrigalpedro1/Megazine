@@ -8,17 +8,13 @@
     </div>
   </div>
   <div class="row py-lg-5">
-    <img
-      src="http://localhost/megazine/megazineBackend/public/api/publicacion/obtenerImagenTarjeta/{{
-        imagen
-      }}"
-      class="img-fluid"
-    />
+    <img src="{{ imagen }}" class="img-fluid" />
   </div>
 </section>
 
 <div class="album py-5 bg-light">
   <div class="container">
     <div [innerHTML]="contenido"></div>
+    <span>{{ contenido }}</span>
   </div>
 </div>

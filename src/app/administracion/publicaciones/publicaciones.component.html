@@ -53,6 +53,7 @@
     </div>
     <div class="form-group">
       <label for="contenido_publicacion" class="form-label">Contenido</label>
+      <!--
       <div class="NgxEditor__Wrapper">
         <div class="editor">
           <ngx-editor-menu [editor]="editor" [toolbar]="toolbar">
@@ -71,6 +72,15 @@
           </ngx-editor>
         </div>
       </div>
+-->
+      <div
+        id="froala-editor"
+        #froalaEditor
+        (froalaInit)="initFroala($event)"
+        [froalaEditor]="froalaOptions"
+        [(froalaModel)]="htmlTemplate"
+        class="froala-editor"
+      ></div>
     </div>
     <div class="row">
       <div class="col">
@@ -157,13 +167,17 @@
   <div class="col">
     <div class="row">
       <input type="file" name="" id="" (change)="getFileCARD($event)" />
-      <button class="btn btn-success col-6 mt-2" (click)="sendFileCARD()">Cargar Img.</button>
+      <button class="btn btn-success col-6 mt-2" (click)="sendFileCARD()">
+        Cargar Img.
+      </button>
     </div>
   </div>
   <div class="col">
     <div class="row">
       <input type="file" name="" id="" (change)="getFileSLIDE($event)" />
-      <button class="btn btn-success col-6 mt-2" (click)="sendFileSLIDE()">Cargar Slid.</button>
+      <button class="btn btn-success col-6 mt-2" (click)="sendFileSLIDE()">
+        Cargar Slid.
+      </button>
     </div>
   </div>
 </div>
